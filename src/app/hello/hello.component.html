@@ -1,5 +1,5 @@
 <main class="container">
-  <!-- Campo de busca -->
+
 <div class="search-box">
   <div class="search-wrapper">
     <input
@@ -24,7 +24,7 @@
 
 
 
-  <!-- Título da busca -->
+
   <h1 class="search-title" *ngIf="searchQuery">
     Exibindo resultado de busca por "{{ searchQuery }}"
   </h1>
@@ -32,10 +32,10 @@
     Encontramos um total de {{ filteredPosts.length }} resultados para sua busca
   </p>
 
-  <!-- Botão para criar nova notícia -->
+
   <a routerLink="/create" class="create-button">Criar nova notícia</a>
 
-  <!-- Lista de posts -->
+
   <section class="news-grid">
     <article class="news-card" *ngFor="let post of filteredPosts">
       <img [src]="post.avatar" alt="Imagem da notícia" />
