@@ -1,0 +1,68 @@
+<main class="container">
+  <!-- Campo de busca -->
+<div class="search-box">
+  <div class="search-wrapper">
+    <input
+      type="text"
+      [(ngModel)]="searchQuery"
+      placeholder="Pesquisar por..."
+      class="sidebar-search"
+    />
+    <svg
+      class="search-icon"
+      (click)="buscar()"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+    >
+      <path
+        d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12A6 6 0 0110 4z"
+      />
+    </svg>
+  </div>
+</div>
+
+
+
+  <!-- Título da busca -->
+  <h1 class="search-title" *ngIf="searchQuery">
+    Exibindo resultado de busca por "{{ searchQuery }}"
+  </h1>
+  <p class="search-subtitle">
+    Encontramos um total de {{ filteredPosts.length }} resultados para sua busca
+  </p>
+
+  <!-- Botão para criar nova notícia -->
+  <a routerLink="/create" class="create-button">Criar nova notícia</a>
+
+  <!-- Lista de posts -->
+  <section class="news-grid">
+    <article class="news-card" *ngFor="let post of filteredPosts">
+      <img [src]="post.avatar" alt="Imagem da notícia" />
+      <div class="news-content">
+        <h2 class="news-title">{{ post.title }}</h2>
+        <p class="news-description">{{ post.description }}</p>
+        <a [routerLink]="['/post', post.id]" class="read-more">Ler mais</a>
+      </div>
+    </article>
+  </section>
+
+  <!-- Categorias / barra lateral -->
+  <aside class="sidebar">
+    <h2 class="sidebar-title">Categorias</h2>
+    <ul class="category-list">
+      <li>Lorem ipsum dolor</li>
+      <hr class="divider" />
+      <li>Lorem ipsum dolor</li>
+      <hr class="divider" />
+      <li>Lorem ipsum dolor</li>
+      <hr class="divider" />
+      <li>Lorem ipsum dolor</li>
+    </ul>
+
+    <hr class="divider" />
+
+    <h3 class="sidebar-subtitle">Procurando alguma notícia?</h3>
+    
+  </aside>
+</main>

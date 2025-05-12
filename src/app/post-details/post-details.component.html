@@ -1,0 +1,5 @@
+<main class="container" *ngIf="post$ | async as post">
+  <h1>{{ post.title }}</h1>
+  <img [src]="post.avatar" alt="Imagem da notícia" style="max-width: 100%; height: auto;" />
+  <p>{{ post.description }}</p>
+</main>
