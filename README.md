@@ -1,59 +1,41 @@
-# TesteAngular
+# Projeto de Interface Responsiva - Aplicação de Notícias com Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.10.
+Este projeto foi desenvolvido com **Angular** e tem como objetivo entregar uma aplicação frontend responsiva com listagem de notícias, busca dinâmica, visualização de detalhes e criação de novos posts. A aplicação consome dados de uma API externa e é organizada em componentes modulares e standalone.
 
-## Development server
+## 🛠️ Tecnologias Utilizadas
 
-To start a local development server, run:
+- **Angular (Standalone Components)**: Estrutura principal da aplicação.
+- **HTML5 e CSS3**: Marcação semântica e layout responsivo.
+- **TypeScript**: Lógica de programação com tipagem estática.
+- **RxJS**: Programação reativa com observables.
+- **API REST (MockAPI)**: Consumo de endpoints para manipulação de dados.
+- **Node.js + Angular CLI**: Ambiente de desenvolvimento.
 
-```bash
-ng serve
-```
+## ⚙️ Funcionalidades
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- 🔍 **Busca de Notícias**: Campo de pesquisa dinâmico com filtragem por título e descrição.
+- 📃 **Listagem de Posts**: Exibe todas as notícias disponíveis com imagem e resumo.
+- ➕ **Criação de Novos Posts**: Formulário para adicionar novas publicações com título, descrição e imagem.
+- 📄 **Visualização de Detalhes**: Página dedicada para exibir conteúdo completo de uma notícia.
+- 📱 **Design Responsivo**: Compatível com diferentes tamanhos de tela (desktop, tablet e mobile).
 
-## Code scaffolding
+## 🔗 API Consumida
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+A aplicação consome os dados da seguinte API:
 
-```bash
-ng generate component component-name
-```
+- Listar todos os posts (GET):  
+  `https://5cf9ae9df26e8c00146cff8d.mockapi.io/api/v1/post`
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- Detalhar post por ID (GET):  
+  `https://5cf9ae9df26e8c00146cff8d.mockapi.io/api/v1/post/:id`
 
-```bash
-ng generate --help
-```
+- Criar novo post (POST):  
+  `https://5cf9ae9df26e8c00146cff8d.mockapi.io/api/v1/post`
 
-## Building
+## ▶️ Como Executar o Projeto
 
-To build the project run:
+### Pré-requisitos
 
-```bash
-ng build
-```
+- Node.js (v14+)
+- Angular CLI (v15+)
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
